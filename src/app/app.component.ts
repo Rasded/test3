@@ -1,4 +1,4 @@
-import { asNativeElements, Component } from '@angular/core';
+import {  Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,28 +6,31 @@ import { asNativeElements, Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TestA';
 
-StringRandom="abcdefghijklmnopqrstuvw"
+title = 'MyFirstApp_AggregationTableau';
+
+
+StringRandom="azertyuiopqsdfghjklmwxcvbn"
+
+
 Tab = new Array(1000).fill(1).map(element => {return {name: this.randomString(this.StringRandom), qte:  Math.floor(Math.random()*100) }});
 
-Tabresult: any;
 
+Tabresult: any;
 timeindex: any = 0;
 timefilter: any = 0;
 timereduce: any = 0;
-
 enregistrements: any;
 
+
 randomString(x: any){
-  let randomNumber = Math.floor(Math.random()*x.length);
 
-return x[randomNumber];
-
+return x[Math.floor(Math.random()*x.length)];
 }
 
+
   ngOnInit(){
-  
+
     this.enregistrements = this.Tab.length
 
   }
@@ -125,9 +128,7 @@ return x[randomNumber];
   resize(){
 
 this.Tab = this.Tab.concat(this.Tab);
-
-
-    this.enregistrements = this.Tab.length 
+this.enregistrements = this.Tab.length 
   }
 
   sorting()
