@@ -1,0 +1,27 @@
+<button (click)="Methodindex()">Clicker pour aggreger avec la methode Filtre </button> timeindex = {{timeindex}}<br> 
+<button (click)="MethodFilter()">Clicker pour aggreger avec la methode Index </button> timefilter = {{timefilter}}<br>
+<button (click)="MethodReduce()">Clicker pour aggreger avec la methode Reduce</button> timereduce = {{timereduce}}<br>
+
+
+
+<ul>
+  <li *ngFor="let item of Tabresult">name: {{ item.name }} ---------------------------------------qte: {{ item.qte }} </li>
+</ul>
+
+<p>nombres d'enregistrements = {{enregistrements}}</p>
+
+<button (click)="resize()" >click ici pour multiplier le nombre d'enregistremets</button><br>
+<button (click)="sorting()" >click ici pour sorter le tableau</button><br>
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+<ul>
+  <li *ngFor="let item of Tab">name: {{ item.name }} ---------------------------------------qte: {{ item.qte }} </li>
+</ul>
+
+
+
+
