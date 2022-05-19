@@ -35,7 +35,15 @@ return x[Math.floor(Math.random()*x.length)];
 
   }
 
+  RegenerateTab(){
+    this.Tab= new Array(1000).fill(1).map(element => {return {name: this.randomString(this.StringRandom), qte:  Math.floor(Math.random()*100) }});
+    this.enregistrements = this.Tab.length
+    this.Tabresult= []
+    this.timeindex = 0
+    this.timefilter = 0
+    this.timereduce = 0
 
+  }
 
   Methodindex(){
 
