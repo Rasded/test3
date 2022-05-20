@@ -33,6 +33,18 @@ return x[Math.floor(Math.random()*x.length)];
 
     this.enregistrements = this.Tab.length
 
+
+let table=[];
+function longest_common_starting_substring(table: any){
+    const string1 = table[0].toString(); //go
+    const string2 = table[1].toString(); //gogoogle
+ console.log(new RegExp(string1))
+    const found = string2.match(string1);
+    return found;
+}
+console.log(longest_common_starting_substring(['go','gogoogle']).join(''));
+console.log(longest_common_starting_substring(['SQLInjection', 'SQLTutorial']))
+
   }
 
   RegenerateTab(){
